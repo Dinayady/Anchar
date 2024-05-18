@@ -1,4 +1,4 @@
-export const norogamiCharacter = [
+export const mockNorogami = [
   {
     id: 0,
     status: 'God',

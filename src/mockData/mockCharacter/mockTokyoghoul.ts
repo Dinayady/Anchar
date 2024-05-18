@@ -1,4 +1,4 @@
-export const tokyoghoulCharacter = [
+export const mockTokyoghoul = [
   {
     id: 0,
     status: 'Anteiku',

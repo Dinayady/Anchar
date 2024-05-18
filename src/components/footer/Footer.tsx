@@ -1,33 +1,35 @@
-import { ReactComponent as TelegramIcon } from '../../icons/tel.svg';
-import { ReactComponent as TwiIcon } from '../../icons/twi.svg';
+import { Link } from 'react-router-dom';
+
+import { ReactComponent as TelegramIcon } from '@app/icons/tel.svg';
+import { ReactComponent as TwiIcon } from '@app/icons/twi.svg';
 
 import style from './footer.module.css';
 
 export const Footer = () => {
   return (
     <footer className={style.footer}>
-      <a href='/'>Anchar</a>
+      <Link to='/'>Anchar</Link>
       <ul className={style.links}>
         <li>
-          <a href=''>menu</a>
+          <Link to='/'>menu</Link>
         </li>
         <li>
-          <a href=''>anime</a>
+          <Link to='/'>anime</Link>
         </li>
         <li>
-          <a href=''>about us</a>
+          <Link to='/'>about us</Link>
         </li>
         <li>
-          <a href=''>terms & privacy</a>
+          <Link to='/'>terms & privacy</Link>
         </li>
       </ul>
       <div>
-        <a href='https://t.me/n_hates_you'>
+        <Link to='https://t.me/n_hates_you'>
           <TelegramIcon />
-        </a>
-        <a href='https://twitter.com/home?lang=ru'>
+        </Link>
+        <Link to='https://twitter.com/home?lang=ru'>
           <TwiIcon />
-        </a>
+        </Link>
       </div>
     </footer>
   );

@@ -1,17 +1,17 @@
-import { narutoCharacter } from './animeСharacter/narutoCharacter';
-import { norogamiCharacter } from './animeСharacter/norogamiCharacter';
-import { tokyoghoulCharacter } from './animeСharacter/tokyoghoulCharacter';
+import { mockNaruto } from './mockCharacter/mockNaruto';
+import { mockNorogami } from './mockCharacter/mockNorogami';
+import { mockTokyoghoul } from './mockCharacter/mockTokyoghoul';
 
-export const animeTitle = [
+export const mockAnime = [
   {
     id: 0,
     title: 'Noragami',
     studio: 'Studio',
     year: 2014,
     gender: 'meow',
-    img: './img/cardanime/noragami.jpg',
+    img: './img/cardanime/noragami.png',
     posterimg: './img/person/norogami/yato-full.png',
-    characters: norogamiCharacter,
+    characters: mockNorogami,
   },
   {
     id: 1,
@@ -19,8 +19,8 @@ export const animeTitle = [
     studio: 'Studio Pierrot',
     year: 2002,
     gender: 'meow',
-    img: './img/cardanime/naruto.jpg',
-    characters: narutoCharacter,
+    img: './img/cardanime/naruto.png',
+    characters: mockNaruto,
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ export const animeTitle = [
     studio: 'Studio Pierrot',
     year: 2004,
     gender: 'meow',
-    img: './img/cardanime/bleach.jpg',
+    img: './img/cardanime/bleach.png',
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const animeTitle = [
     year: 2014,
     gender: 'meow',
     img: './img/cardanime/tokyoghole.jpg',
-    characters: tokyoghoulCharacter,
+    characters: mockTokyoghoul,
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export const animeTitle = [
     studio: 'P.A. Works',
     year: 2012,
     gender: 'meow',
-    img: './img/cardanime/Another.jpeg',
+    img: './img/cardanime/Another.jpg',
   },
   {
     id: 5,
@@ -101,7 +101,7 @@ export const animeTitle = [
     studio: 'Tencent Penguin Pictures',
     year: 2018,
     gender: 'meow',
-    img: './img/cardanime/MoDaoZuShi.jpeg',
+    img: './img/cardanime/MoDaoZuShi.jpg',
   },
   {
     id: 12,
@@ -109,14 +109,14 @@ export const animeTitle = [
     studio: 'Studio MAPPA',
     year: 2020,
     gender: 'meow',
-    img: './img/cardanime/JujutsuKaisen.jpeg',
+    img: './img/cardanime/JujutsuKaisen.jpg',
   },
   {
     id: 13,
-    title: 'aaaaaaaaaaaa',
-    studio: 'Studio',
-    year: 2000,
+    title: 'Bocchi the Rock!',
+    studio: 'CloverWorks',
+    year: 2022,
     gender: 'meow',
-    img: './img/cardanime/aaaaaaaa.aaaaaaaaaaaaa',
+    img: './img/cardanime/BocchitheRock.jpg',
   },
 ];

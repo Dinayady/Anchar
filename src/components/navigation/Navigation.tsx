@@ -1,6 +1,8 @@
-import { ReactComponent as SearchIcon } from '../../icons/search.svg';
-import { ReactComponent as MoonIcon } from '../../icons/moon.svg';
-import { ReactComponent as SunIcon } from '../../icons/sun.svg';
+import { Link } from 'react-router-dom';
+
+import { ReactComponent as SearchIcon } from '@app/icons/search.svg';
+import { ReactComponent as MoonIcon } from '@app/icons/moon.svg';
+import { ReactComponent as SunIcon } from '@app/icons/sun.svg';
 
 import style from './navigation.module.css';
 
@@ -10,14 +12,14 @@ export const Navigation = () => {
       <a href='/' className={style.logo}>
         Anchar
       </a>
-      <div style={{ display: 'flex', gap: '20px' }}>
+      <div className={style.navigationBtn}>
         <button>
           <MoonIcon />
+          <SunIcon />
         </button>
-        <a href='/' className={style.logoSearch}>
-          {/* <input type='text' /> */}
+        <Link to='/' className={style.logoSearch}>
           <SearchIcon />
-        </a>
+        </Link>
       </div>
     </nav>
   );

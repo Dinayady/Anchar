@@ -9,9 +9,7 @@ export const Layout = ({ children }: Props) => {
   return (
     <>
       <Navigation />
-      <div className='container' style={{ height: '100%', marginTop: '20px' }}>
-        {children}
-      </div>
+      <div className='container'>{children}</div>
       <Footer />
     </>
   );

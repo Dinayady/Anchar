@@ -1,20 +1,25 @@
 .navigation {
-  font-family: 'Italiana', sans-serif;
+  font-family: var(--system-font-italiana);
   padding: 10px 210px;
-  background: #2f3148;
-  border-bottom: 2px solid #a7d1d2;
+  background: var(--system-color-grayishPurpleBlue);
+  border-bottom: 2px solid var(--system-color-accent);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  color: #a7d1d2;
-  font-size: 40px;
+  color: var(--system-color-accent);
+  font-size: var(--system-size-large);
   font-weight: bolder;
 }
 
 .logoSearch {
   display: flex;
   align-items: center;
+}
+
+.navigationBtn {
+  display: flex;
+  gap: 20px;
 }

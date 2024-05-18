@@ -1,13 +1,18 @@
-import { CardMin } from '../../components/cardMin/CardMin';
-import { Layout } from '../../components/layout/Layout';
-import { animeTitle } from '../../helper/animeTitle';
+import { Link } from 'react-router-dom';
+
+import { CardMin } from '@components/cardMin/CardMin';
+import { Layout } from '@components/layout/Layout';
+import { mockAnime } from '@app/mockData/mockAnime';
+import { ReactComponent as BtnArrowIcon } from '@app/icons/btn-arrow.svg';
 
 import style from './main.module.css';
 
-const animeFirstNine = Object.values(animeTitle).slice(0, 9);
-animeFirstNine.map((props) => console.log(props));
-
 export const Main = () => {
+  const lastAnime = Object.values(mockAnime).slice(
+    mockAnime.length - 8,
+    mockAnime.length
+  );
+
   return (
     <Layout>
       <div className={style.header}>
@@ -23,9 +28,20 @@ export const Main = () => {
         </div>
       </div>
       <div className={style.lastAnime}>
-        {animeFirstNine.map((props) => {
-          return <CardMin id={props.id} img={props.img} title={props.title} />;
-        })}
+        <h2 className={style.lastAnime__title}>Last Anime</h2>
+        <div className={style.lastAnime__cards}>
+          {lastAnime.map((props) => {
+            return (
+              <CardMin id={props.id} img={props.img} title={props.title} />
+            );
+          })}
+        </div>
+        <Link to='/'>
+          <div className={style.lastanime__btn}>
+            <p className={style.lastanime__btnTitle}>See more</p>
+            <BtnArrowIcon />
+          </div>
+        </Link>
       </div>
     </Layout>
   );

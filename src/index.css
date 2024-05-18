@@ -11,6 +11,27 @@
   src: url('./fonts/tokyo-pinku.ttf');
 }
 
+:root {
+  /* Colors */
+  --system-color-accent: #a7d1d2;
+  --system-color-dustyBlue: #e0f4f5;
+  --system-color-blackishBlue: #101116;
+  --system-color-grayishPurpleBlue: #2f3148;
+  --system-color-lightPurpleBlue: #8689ac;
+  --system-color-footer: #587099;
+
+  /* Fonts */
+  --system-font-accent: 'Inter', sans-serif;
+  --system-font-playfairDisplay: 'Playfair Display';
+  --system-font-italiana: 'Italiana', sans-serif;
+
+  /* Fonts size */
+  --system-size-accent: 15px;
+  --system-size-large: 40px;
+  --system-size-medium: 25px;
+  --system-size-small: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,15 +39,15 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
+  font-family: var(--system-font-accent);
+  font-size: var(--system-size-accent);
   background-color: #3f5576;
-  color: #a7d1d2;
+  color: var(--system-color-accent);
 }
 
 h1 {
-  font-family: 'Playfair Display';
-  font-size: 40px;
+  font-family: var(--system-font-playfairDisplay);
+  font-size: var(--system-size-large);
 }
 
 .container {
@@ -34,18 +55,15 @@ h1 {
   width: 1110px;
 }
 
-a {
-  text-decoration: none;
-  color: #a7d1d2;
-}
-
+a,
 a:active,
 a:hover {
-  color: #63898c;
+  text-decoration: none;
+  color: var(--system-color-accent);
 }
 
 ul li {
-  list-style-type: none;
+  list-style: none;
 }
 
 button {

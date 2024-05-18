@@ -1,4 +1,4 @@
-export const narutoCharacter = [
+export const mockNaruto = [
   {
     id: 0,
     status: 'Konohagakure',
