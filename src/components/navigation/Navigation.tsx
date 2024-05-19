@@ -13,11 +13,11 @@ export const Navigation = () => {
         Anchar
       </a>
       <div className={style.navigationBtn}>
-        <button>
-          <MoonIcon />
-          <SunIcon />
+        <button className={style.switchThemeBtn}>
+          <MoonIcon className={style.moonIcon} />
+          <SunIcon className={style.sunIcon} />
         </button>
-        <Link to='/' className={style.logoSearch}>
+        <Link to='/search' className={style.logoSearch}>
           <SearchIcon />
         </Link>
       </div>

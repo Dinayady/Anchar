@@ -3,7 +3,7 @@ export const mockNorogami = [
     id: 0,
     status: 'God',
     character: 'Yato',
-    img: './img/person/norogami/yato.jpg',
+    img: './img/person/norogami/yato.png',
   },
   {
     id: 1,

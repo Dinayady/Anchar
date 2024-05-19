@@ -23,3 +23,11 @@
   display: flex;
   gap: 20px;
 }
+
+.moonIcon {
+  display: block;
+}
+
+.sunIcon {
+  display: none;
+}

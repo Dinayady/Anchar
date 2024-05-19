@@ -18,6 +18,8 @@
   --system-color-blackishBlue: #101116;
   --system-color-grayishPurpleBlue: #2f3148;
   --system-color-lightPurpleBlue: #8689ac;
+  --system-color-moderateBlue: #3f5576;
+  --system-color-azureBlue: #015366;
   --system-color-footer: #587099;
 
   /* Fonts */
@@ -41,7 +43,7 @@
 body {
   font-family: var(--system-font-accent);
   font-size: var(--system-size-accent);
-  background-color: #3f5576;
+  background-color: var(--system-color-moderateBlue);
   color: var(--system-color-accent);
 }
 
@@ -53,6 +55,7 @@ h1 {
 .container {
   margin: 0 auto;
   width: 1110px;
+  margin-top: 20px;
 }
 
 a,
@@ -60,6 +63,10 @@ a:active,
 a:hover {
   text-decoration: none;
   color: var(--system-color-accent);
+}
+
+::-webkit-input-placeholder {
+  color: var(--system-color-moderateBlue);
 }
 
 ul li {

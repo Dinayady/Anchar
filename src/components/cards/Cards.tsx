@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import style from './cardMin.module.css';
+import style from './cards.module.css';
 
 type Props = {
   id: number;
@@ -8,7 +8,7 @@ type Props = {
   title: string;
 };
 
-export const CardMin = ({ id, img, title }: Props) => {
+export const Cards = ({ id, img, title }: Props) => {
   return (
     <NavLink to={`/${id}`}>
       <div className={style.card}>

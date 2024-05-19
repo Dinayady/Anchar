@@ -6,9 +6,8 @@ const combineArrays = <T>(...arrays: T[][]): T[] => {
   const combinedArray: T[] = [];
 
   arrays.forEach((array) => {
-    const id = Math.random() * 1000;
-
     array.forEach((item) => {
+      const id = Math.floor(Math.random() * 1000);
       const newItem = {
         ...item,
         id,
@@ -20,7 +19,7 @@ const combineArrays = <T>(...arrays: T[][]): T[] => {
 };
 
 export const characterList = combineArrays(
-  mockNaruto,
   mockNorogami,
+  mockNaruto,
   mockTokyoghoul
 );

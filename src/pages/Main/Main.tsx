@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { CardMin } from '@components/cardMin/CardMin';
+import { Cards } from '@components/cards/Cards';
 import { Layout } from '@components/layout/Layout';
 import { mockAnime } from '@app/mockData/mockAnime';
 import { ReactComponent as BtnArrowIcon } from '@app/icons/btn-arrow.svg';
@@ -31,9 +31,7 @@ export const Main = () => {
         <h2 className={style.lastAnime__title}>Last Anime</h2>
         <div className={style.lastAnime__cards}>
           {lastAnime.map((props) => {
-            return (
-              <CardMin id={props.id} img={props.img} title={props.title} />
-            );
+            return <Cards id={props.id} img={props.img} title={props.title} />;
           })}
         </div>
         <Link to='/'>
