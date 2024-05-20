@@ -22,10 +22,12 @@ export const Search = () => {
     } else {
       const filteredCharacters = characterList.filter((item: any) => {
         return Object.keys(item).some((key) => {
-          return item[key]
-            .toString()
-            .toLowerCase()
-            .includes(inputValue.toLowerCase());
+          if (key == 'character') {
+            return item[key]
+              .toString()
+              .toLowerCase()
+              .includes(inputValue.toLowerCase());
+          }
         });
       });
       setData(filteredCharacters);
@@ -49,7 +51,7 @@ export const Search = () => {
         {data.length === 0 && (
           <div className={style.notFound}>
             <h1>Not found :(</h1>
-            <img src='./img/sad-chibi.png' alt='' />
+            <img src='./img/sad-chibi.png' alt='chibi' />
           </div>
         )}
         <div className={style.searchCards}>

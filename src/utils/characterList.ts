@@ -2,7 +2,7 @@ import { mockNaruto } from '@app/mockData/mockCharacter/mockNaruto';
 import { mockNorogami } from '@app/mockData/mockCharacter/mockNorogami';
 import { mockTokyoghoul } from '@app/mockData/mockCharacter/mockTokyoghoul';
 
-const combineArrays = <T>(...arrays: T[][]): T[] => {
+const combineArrays = <T>(...arrays: T[][]) => {
   const combinedArray: T[] = [];
 
   arrays.forEach((array) => {

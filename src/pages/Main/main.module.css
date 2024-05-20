@@ -27,26 +27,26 @@
 
 .title,
 .subtitle {
-  background-color: var(--system-color-blackishBlue);
+  background-color: var(--accent-background-color);
   padding: 10px 20px;
 }
 
 .subtitle {
-  font-size: var(--system-size-medium);
-  color: var(--system-color-lightPurpleBlue);
+  font-size: var(--medium-size);
+  color: var(--main-background-btn-color);
 }
 
 .btn,
-.lastanime__btn {
-  background-color: var(--system-color-lightPurpleBlue);
+.lastAnimeBtn {
+  background-color: var(--main-background-btn-color);
   padding: 14px 23px;
-  font-size: var(--system-size-medium);
+  font-size: var(--medium-size);
   font-weight: 500;
   transition: all ease 0.3s;
 }
 
 .btn:hover,
-.lastanime__btn:hover {
+.lastAnimeBtn:hover {
   background: rgb(94, 95, 118);
 }
 
@@ -57,14 +57,14 @@
   align-items: center;
 }
 
-.lastAnime__title {
-  color: var(--system-color-accent);
-  font-family: var(--system-font-playfairDisplay);
-  font-size: var(--system-size-large);
+.lastAnimeTitle {
+  color: var(--main-text-color);
+  font-family: var(--second-font);
+  font-size: var(--large-size);
   font-weight: 900;
 }
 
-.lastAnime__cards {
+.lastAnimeCards {
   margin-top: 30px;
   margin-bottom: 50px;
   display: grid;
@@ -74,7 +74,7 @@
   grid-row-gap: 30px;
 }
 
-.lastanime__btn {
+.lastAnimeBtn {
   display: flex;
   align-items: center;
   gap: 20px;

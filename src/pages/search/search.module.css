@@ -9,17 +9,17 @@
 }
 
 .searchInput {
-  color: var(--system-color-moderateBlue);
-  border: 3px solid var(--system-color-azureBlue);
-  background: var(--system-color-lightPurpleBlue);
-  font-size: var(--system-size-small);
+  color: var(--main-background-color);
+  border: 3px solid var(--main-input-color);
+  background: var(--main-background-btn-color);
+  font-size: var(--small-size);
   padding: 10px 15px;
 }
 
 .searchInput:focus {
-  color: var(--system-color-azureBlue);
-  outline-color: var(--system-color-lightPurpleBlue);
-  box-shadow: -3px -3px 15px var(--system-color-lightPurpleBlue);
+  color: var(--main-input-color);
+  outline-color: var(--main-background-btn-color);
+  box-shadow: -3px -3px 15px var(--main-background-btn-color);
   transition: 0.1s;
   transition-property: box-shadow;
 }
