@@ -9,11 +9,11 @@ import { ReactComponent as BtnArrowIcon } from '@app/icons/btn-arrow.svg';
 
 import style from './main.module.css';
 
-export const Main = () => {
-  const SHIFT_TO_END = 8;
-  const START_ANIME_FROM = mockAnime.length - SHIFT_TO_END;
-  const END_ANIME_TO = mockAnime.length;
+const SHIFT_TO_END = 8;
+const START_ANIME_FROM = mockAnime.length - SHIFT_TO_END;
+const END_ANIME_TO = mockAnime.length;
 
+export const Main = () => {
   const lastAnime = getArrayFromTo(mockAnime, START_ANIME_FROM, END_ANIME_TO);
 
   return (
@@ -33,9 +33,9 @@ export const Main = () => {
       <div className={style.lastAnime}>
         <h2 className={style.lastAnimeTitle}>Last Anime</h2>
         <div className={style.lastAnimeCards}>
-          {lastAnime.map((props) => {
-            return <Cards id={props.id} img={props.img} title={props.title} />;
-          })}
+          {lastAnime.map((props) => (
+            <Cards id={props.id} img={props.img} title={props.title} />
+          ))}
         </div>
         <Link to={Paths.catalog}>
           <div className={style.lastAnimeBtn}>

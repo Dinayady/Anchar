@@ -1,8 +1,10 @@
+import { ReactNode } from 'react';
+
 import { Footer } from '../footer/Footer';
 import { Navigation } from '../navigation/Navigation';
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export const Layout = ({ children }: Props) => {

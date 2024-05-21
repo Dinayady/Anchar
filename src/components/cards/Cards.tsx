@@ -14,7 +14,7 @@ export const Cards = ({ id, img, title }: Props) => {
   return (
     <NavLink to={Paths.anime + '/' + id}>
       <div className={style.card}>
-        <img src={img} alt='cardImg' className={style.cardImg} />
+        <img src={img} alt={title} className={style.cardImg} />
         <p className={style.cardTitle}>{title}</p>
       </div>
     </NavLink>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 import { characterList } from '@utils/characterList';
 import { Layout } from '@app/components/layout/Layout';
@@ -10,25 +10,18 @@ export const Search = () => {
   const [data, setData] = useState(characterList);
   const [character, setCharacter] = useState('');
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setCharacter(event.target.value);
     filterCharacter(event);
   };
 
-  const filterCharacter = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const filterCharacter = (event: ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value.trim();
     if (!inputValue) {
       setData(characterList);
     } else {
-      const filteredCharacters = characterList.filter((item: any) => {
-        return Object.keys(item).some((key) => {
-          if (key == 'character') {
-            return item[key]
-              .toString()
-              .toLowerCase()
-              .includes(inputValue.toLowerCase());
-          }
-        });
+      const filteredCharacters = characterList.filter((item) => {
+        return item.character.toLowerCase().includes(inputValue.toLowerCase());
       });
       setData(filteredCharacters);
     }
