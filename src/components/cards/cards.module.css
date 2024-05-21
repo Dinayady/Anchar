@@ -6,9 +6,9 @@
   justify-content: space-around;
   width: 270px;
   height: 450px;
-  color: var(--system-color-grayishPurpleBlue);
+  color: var(--second-text-color);
   overflow: hidden;
-  background-color: var(--system-color-dustyBlue);
+  background-color: var(--second-background-color);
   cursor: pointer;
   transition: all ease 0.3s;
 }
@@ -19,7 +19,7 @@
 
 .cardTitle {
   padding: 5px;
-  font-size: var(--system-size-small);
+  font-size: var(--small-size);
   font-weight: 400;
   margin-bottom: 10px;
   text-align: center;

@@ -13,23 +13,26 @@
 
 :root {
   /* Colors */
-  --system-color-accent: #a7d1d2;
-  --system-color-dustyBlue: #e0f4f5;
-  --system-color-blackishBlue: #101116;
-  --system-color-grayishPurpleBlue: #2f3148;
-  --system-color-lightPurpleBlue: #8689ac;
-  --system-color-footer: #587099;
+  --main-text-color: #a7d1d2;
+  --second-text-color: #2f3148;
+  --main-input-color: #015366;
+
+  --main-background-color: #3f5576;
+  --main-background-btn-color: #8689ac;
+  --main-background-footer-color: #587099;
+  --second-background-color: #e0f4f5;
+  --accent-background-color: #101116;
 
   /* Fonts */
-  --system-font-accent: 'Inter', sans-serif;
-  --system-font-playfairDisplay: 'Playfair Display';
-  --system-font-italiana: 'Italiana', sans-serif;
+  --main-font: 'Inter', sans-serif;
+  --second-font: 'Playfair Display';
+  --main-nav-font: 'Italiana', sans-serif;
 
   /* Fonts size */
-  --system-size-accent: 15px;
-  --system-size-large: 40px;
-  --system-size-medium: 25px;
-  --system-size-small: 20px;
+  --main-size: 14px;
+  --large-size: 40px;
+  --medium-size: 24px;
+  --small-size: 20px;
 }
 
 * {
@@ -39,27 +42,32 @@
 }
 
 body {
-  font-family: var(--system-font-accent);
-  font-size: var(--system-size-accent);
-  background-color: #3f5576;
-  color: var(--system-color-accent);
+  font-family: var(--main-font);
+  font-size: var(--main-size);
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
 }
 
 h1 {
-  font-family: var(--system-font-playfairDisplay);
-  font-size: var(--system-size-large);
+  font-family: var(--second-font);
+  font-size: var(--large-size);
 }
 
 .container {
   margin: 0 auto;
   width: 1110px;
+  margin-top: 20px;
 }
 
 a,
 a:active,
 a:hover {
   text-decoration: none;
-  color: var(--system-color-accent);
+  color: var(--main-text-color);
+}
+
+::-webkit-input-placeholder {
+  color: var(--main-background-color);
 }
 
 ul li {

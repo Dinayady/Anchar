@@ -1,16 +1,16 @@
 .navigation {
-  font-family: var(--system-font-italiana);
+  font-family: var(--main-nav-font);
   padding: 10px 210px;
-  background: var(--system-color-grayishPurpleBlue);
-  border-bottom: 2px solid var(--system-color-accent);
+  background: var(--second-text-color);
+  border-bottom: 2px solid var(--main-text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  color: var(--system-color-accent);
-  font-size: var(--system-size-large);
+  color: var(--main-text-color);
+  font-size: var(--large-size);
   font-weight: bolder;
 }
 
@@ -22,4 +22,12 @@
 .navigationBtn {
   display: flex;
   gap: 20px;
+}
+
+.moonIcon {
+  display: block;
+}
+
+.sunIcon {
+  display: none;
 }

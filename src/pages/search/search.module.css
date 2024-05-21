@@ -1,0 +1,46 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchTitle {
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  color: var(--main-background-color);
+  border: 3px solid var(--main-input-color);
+  background: var(--main-background-btn-color);
+  font-size: var(--small-size);
+  padding: 10px 15px;
+}
+
+.searchInput:focus {
+  color: var(--main-input-color);
+  outline-color: var(--main-background-btn-color);
+  box-shadow: -3px -3px 15px var(--main-background-btn-color);
+  transition: 0.1s;
+  transition-property: box-shadow;
+}
+
+.searchCards {
+  margin: 30px 0 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+}
+
+.notFound img {
+  width: 250px;
+}
