@@ -53,6 +53,13 @@ h1 {
   font-size: var(--large-size);
 }
 
+h2 {
+  color: var(--main-text-color);
+  font-family: var(--second-font);
+  font-size: var(--large-size);
+  font-weight: 900;
+}
+
 .container {
   margin: 0 auto;
   width: 1110px;
