@@ -1,4 +1,6 @@
-export const mockNorogami = [
+import { CharacterType } from '../type/typeCharacter';
+
+export const mockNorogami: CharacterType[] = [
   {
     id: 0,
     status: 'God',

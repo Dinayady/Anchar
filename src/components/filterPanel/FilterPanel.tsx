@@ -1,17 +1,33 @@
 import { useState } from 'react';
+import { useSelectItem } from '@app/hooks/useSelectItem';
 
 import { RangeYear } from '../rangeYear/RangeYear';
-import { LabelCheck } from '../labelCheck/LabelCheck';
+import { CheckboxField } from '../CheckboxField/CheckboxField';
 import { mockGenres } from '@app/mockData/mockFilter/mockGenres';
 import { mockStudio } from '@app/mockData/mockFilter/mockStudio';
 
 import style from './filterPanel.module.css';
 
-const yearFrom = 1900;
-const yearTo = 2024;
+type Props = {
+  yearFrom: number;
+  yearTo: number;
+  animeFilter: (data: {
+    dataMin: number;
+    dataMax: number;
+    genres: string[];
+    studio: string[];
+  }) => void;
+};
 
-export const FilterPanel = () => {
+export const FilterPanel = ({ yearFrom, yearTo, animeFilter }: Props) => {
   let [hide, useHide] = useState(false);
+
+  const [dataMin, setDataMin] = useState(yearFrom);
+  const [dataMax, setDataMax] = useState(yearTo);
+  const [genres, filterGenres] = useSelectItem();
+  const [studio, filterStudio] = useSelectItem();
+  animeFilter({ dataMax, dataMin, genres, studio });
+
   const expandList = (id: string, id2: string) => {
     const element = document.getElementById(id);
     const elementBtn = document.getElementById(id2);
@@ -25,15 +41,6 @@ export const FilterPanel = () => {
         elementBtn.style.transform = 'rotate(90deg)';
       }
     }
-
-    // if (element) {
-    //   element.style.display =
-    //     element.style.display === 'none' ? 'block' : 'none';
-    // }
-    // if (elementBtn) {
-    //   elementBtn.style.transform =
-    //     element?.style.display === 'none' ? 'rotate(90deg)' : 'rotate(270deg)';
-    // }
   };
 
   return (
@@ -49,7 +56,14 @@ export const FilterPanel = () => {
           ></button>
         </div>
         <div id='catalog-year' className={style.filterList}>
-          <RangeYear min={yearFrom} max={yearTo} />
+          <RangeYear
+            min={yearFrom}
+            max={yearTo}
+            onDataChange={({ dataMin, dataMax }) => {
+              setDataMin(dataMin);
+              setDataMax(dataMax);
+            }}
+          />
         </div>
       </div>
 
@@ -63,8 +77,11 @@ export const FilterPanel = () => {
           ></button>
         </div>
         <ul id='catalog-genres' className={style.filterList}>
+          <button className={style.clear}>clear</button>
           {mockGenres.map((props) => (
-            <LabelCheck title={props.genres} />
+            <li className={style.listSection}>
+              <CheckboxField title={props.genres} filtered={filterGenres} />
+            </li>
           ))}
         </ul>
       </div>
@@ -79,8 +96,11 @@ export const FilterPanel = () => {
           ></button>
         </div>
         <ul id='catalog-studio' className={style.filterList}>
+          <button className={style.clear}>clear</button>
           {mockStudio.map((props) => (
-            <LabelCheck title={props.studio} />
+            <li className={style.listSection}>
+              <CheckboxField title={props.studio} filtered={filterStudio} />
+            </li>
           ))}
         </ul>
       </div>

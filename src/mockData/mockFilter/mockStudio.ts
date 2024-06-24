@@ -51,4 +51,8 @@ export const mockStudio = [
     id: 12,
     studio: 'CoMix Wave Films',
   },
+  {
+    id: 13,
+    studio: 'Bones',
+  },
 ];

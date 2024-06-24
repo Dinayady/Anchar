@@ -1,16 +1,17 @@
 import { mockNaruto } from './mockCharacter/mockNaruto';
 import { mockNorogami } from './mockCharacter/mockNorogami';
 import { mockTokyoghoul } from './mockCharacter/mockTokyoghoul';
+import { AnimeType } from './type/typeAnime';
 
-export const mockAnime = [
+export const mockAnime: AnimeType[] = [
   {
     id: 0,
     title: 'Noragami',
-    studio: 'Studio',
+    studio: 'Bones',
     year: 2014,
-    gender: 'meow',
+    genres: ['Action', 'Supernatural', 'Fantasy'],
     img: './img/cardanime/noragami.png',
-    posterimg: './img/person/norogami/yato-full.png',
+    posterImg: './img/person/norogami/yato-full.png',
     characters: mockNorogami,
   },
   {
@@ -18,7 +19,7 @@ export const mockAnime = [
     title: 'Naruto',
     studio: 'Studio Pierrot',
     year: 2002,
-    gender: 'meow',
+    genres: ['Adventure', 'Comedy', 'Fantasy'],
     img: './img/cardanime/naruto.png',
     characters: mockNaruto,
   },
@@ -27,7 +28,7 @@ export const mockAnime = [
     title: 'Bleach',
     studio: 'Studio Pierrot',
     year: 2004,
-    gender: 'meow',
+    genres: ['Adventure', 'Supernatural'],
     img: './img/cardanime/bleach.png',
   },
   {
@@ -35,7 +36,7 @@ export const mockAnime = [
     title: 'Tokyo Ghoul',
     studio: 'Studio Pierrot',
     year: 2014,
-    gender: 'meow',
+    genres: ['Supernatural', 'Fantasy'],
     img: './img/cardanime/tokyoghole.jpg',
     characters: mockTokyoghoul,
   },
@@ -44,7 +45,7 @@ export const mockAnime = [
     title: 'Another',
     studio: 'P.A. Works',
     year: 2012,
-    gender: 'meow',
+    genres: ['Horror', 'Supernatural'],
     img: './img/cardanime/Another.jpg',
   },
   {
@@ -52,7 +53,7 @@ export const mockAnime = [
     title: 'Sen to Chihiro no Kamikakushi',
     studio: 'Studio Ghibli',
     year: 2001,
-    gender: 'meow',
+    genres: ['meow'],
     img: './img/cardanime/SentoChihironoKamikakushi.jpg',
   },
   {
@@ -60,7 +61,7 @@ export const mockAnime = [
     title: 'Howl no Ugoku Shiro',
     studio: 'Studio Ghibli',
     year: 2004,
-    gender: 'meow',
+    genres: ['meow'],
     img: './img/cardanime/HowlnoUgokuShiro.jpg',
   },
   {
@@ -68,7 +69,7 @@ export const mockAnime = [
     title: 'Mononoke Hime',
     studio: 'Studio Ghibli',
     year: 1997,
-    gender: 'meow',
+    genres: ['meow'],
     img: './img/cardanime/MononokeHime.jpg',
   },
   {
@@ -76,7 +77,7 @@ export const mockAnime = [
     title: 'Gake no Ue no Ponyo',
     studio: 'Studio Ghibli',
     year: 2008,
-    gender: 'meow',
+    genres: ['meow'],
     img: './img/cardanime/GakenoUenoPonyo.jpg',
   },
   {
@@ -84,7 +85,7 @@ export const mockAnime = [
     title: 'Fullmetal Alchemist: Brotherhood',
     studio: 'Bones Animation Studios',
     year: 2009,
-    gender: 'meow',
+    genres: ['meow'],
     img: './img/cardanime/FullmetalAlchemistBrotherhood.jpg',
   },
   {
@@ -92,7 +93,7 @@ export const mockAnime = [
     title: 'Demon Slayer: Kimetsu no Yaiba',
     studio: 'Ufotable',
     year: 2019,
-    gender: 'meow',
+    genres: ['meow'],
     img: './img/cardanime/DemonSlayerKimetsunoYaiba.jpg',
   },
   {
@@ -100,7 +101,7 @@ export const mockAnime = [
     title: 'Mo Dao Zu Shi',
     studio: 'Tencent Penguin Pictures',
     year: 2018,
-    gender: 'meow',
+    genres: ['meow'],
     img: './img/cardanime/MoDaoZuShi.jpg',
   },
   {
@@ -108,7 +109,7 @@ export const mockAnime = [
     title: 'Jujutsu Kaisen',
     studio: 'Studio MAPPA',
     year: 2020,
-    gender: 'meow',
+    genres: ['meow'],
     img: './img/cardanime/JujutsuKaisen.jpg',
   },
   {
@@ -116,7 +117,7 @@ export const mockAnime = [
     title: 'Bocchi the Rock!',
     studio: 'CloverWorks',
     year: 2022,
-    gender: 'meow',
+    genres: ['meow'],
     img: './img/cardanime/BocchitheRock.jpg',
   },
 ];

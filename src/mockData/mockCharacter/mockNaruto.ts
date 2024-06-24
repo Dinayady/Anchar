@@ -1,4 +1,6 @@
-export const mockNaruto = [
+import { CharacterType } from '../type/typeCharacter';
+
+export const mockNaruto: CharacterType[] = [
   {
     id: 0,
     status: 'Konohagakure',

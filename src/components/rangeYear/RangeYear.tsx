@@ -4,16 +4,16 @@ import style from './rangeYear.module.css';
 type Props = {
   min: number;
   max: number;
+  onDataChange: (data: { dataMin: number; dataMax: number }) => void;
 };
 
-export const RangeYear = ({ min, max }: Props) => {
+export const RangeYear = ({ min, max, onDataChange }: Props) => {
   const [dataMin, setDataMin] = useState(min);
   const [dataMax, setDataMax] = useState(max);
 
   let totalRange = max - min;
   let percentLeft = ((dataMin - min) / totalRange) * 100;
   let percentRight = ((max - dataMax) / totalRange) * 100;
-  console.log(percentLeft, percentRight);
 
   return (
     <div>
@@ -42,7 +42,10 @@ export const RangeYear = ({ min, max }: Props) => {
           min={min}
           max={max}
           value={dataMin}
-          onChange={(e: any) => setDataMin(e.target.value)}
+          onChange={(e: any) => {
+            setDataMin(e.target.value);
+            onDataChange({ dataMin: e.target.value, dataMax });
+          }}
           className={style.range}
           id='min'
         />
@@ -51,7 +54,10 @@ export const RangeYear = ({ min, max }: Props) => {
           min={min}
           max={max}
           value={dataMax}
-          onChange={(e: any) => setDataMax(e.target.value)}
+          onChange={(e: any) => {
+            setDataMax(e.target.value);
+            onDataChange({ dataMin, dataMax: e.target.value });
+          }}
           className={style.range}
           id='max'
         />
