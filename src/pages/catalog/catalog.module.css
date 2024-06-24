@@ -1,0 +1,16 @@
+.animeWrapper {
+  display: flex;
+}
+
+.filterPanel {
+  padding: 10px 15px;
+}
+
+.animeList {
+  padding: 0 0 30px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}

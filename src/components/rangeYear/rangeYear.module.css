@@ -1,0 +1,106 @@
+.title {
+  font-size: var(--main-size);
+  float: left;
+  margin: 0 10px 0 0;
+  line-height: 1.6;
+}
+
+.value {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 0 0 15px 0;
+}
+
+.min,
+.max {
+  display: flex;
+  align-items: center;
+}
+
+.minValue,
+.maxValue {
+  font-size: var(--main-size);
+  text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid #dedede;
+}
+
+.minMaxRange {
+  padding: 0 0 15px;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  margin: 5px 0 0 0;
+  height: 5px;
+  background: var(--second-background-color);
+}
+
+.progress {
+  position: absolute;
+  height: 5px;
+  right: 25%;
+  left: 25%;
+  background: var(--main-input-color);
+}
+
+.range {
+  -webkit-appearance: none;
+  position: absolute;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  max-width: 400px;
+  pointer-events: none;
+  background: none;
+  top: -5px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  float: left;
+  cursor: pointer;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 1em;
+  height: 1.5em;
+  background: var(--main-background-btn-color);
+}
+
+.marks {
+  padding: 10px 0;
+  height: 80px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  gap: 5px;
+}
+
+.shortLine {
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  background: var(--main-text-color);
+}
+
+.marksLine {
+  background: var(--main-text-color);
+  margin-left: -1px;
+  width: 2px;
+  height: 15px;
+}

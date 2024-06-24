@@ -1,4 +1,6 @@
-export const mockTokyoghoul = [
+import { CharacterType } from '../type/typeCharacter';
+
+export const mockTokyoghoul: CharacterType[] = [
   {
     id: 0,
     status: 'Anteiku',
